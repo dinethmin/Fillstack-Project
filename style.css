@@ -14,6 +14,7 @@ h1 {
     background-color: #ffffff;
     font-size: 2.5vw;
     color: #ff666b;
+    cursor: default;
 }
 
 .flex-container {
@@ -36,7 +37,7 @@ h1 {
 
 .search-bar i {
     color: #888;
-    font-weight:  Thin;
+    font-weight: Thin;
     margin-right: 10px;
     font-size: 1.6vw;
 }
@@ -63,7 +64,7 @@ section {
     display: flex;
 }
 
-.container {
+.nav-container {
     display: flex;
     background: #ff666b;
     padding: 20px;
@@ -89,13 +90,119 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Style the content */
-article {
-    -webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
-    background-color: #f1f1f1;
-    padding: 10px;
+/* ------------------- Hero -------------------- */
+.hero-container {
+    background: #ffffff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    cursor: default;
+}
+
+.hero-container h2 {
+    margin-bottom: 10px;
+    font-size: 6vw;
+}
+
+.hero-container span {
+    color: #ff666b;
+}
+
+.hero-container .cta-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero-container .cta-buttons .a {
+    background: #ff666b;
+    color: #fff;
+}
+
+.hero-container .cta-buttons .b {
+    background: transparent;
+    color: #ff666b;
+}
+
+.hero-container .cta-buttons button:hover {
+    background: #555;
+    color: #ff666b;
+}
+
+/* ----------------- hero-end-container ----------------- */
+.hero-end-container {
+    display: flex;
+    background: #ffffff;
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: 100;
+    justify-content: space-evenly;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.hero-end-container h2:hover {
+    cursor: default;
+    text-shadow: 0 0 10px rgba(9, 102, 202, 0.5);
+}
+
+/* Products */
+.products {
+    background: #fff;
+    padding: 30px 20px;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.product img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    color: #333;
+}
+
+.product .old-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.product button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background: #555;
 }
 
 /* Style the footer */
@@ -111,8 +218,22 @@ footer {
     h1 {
         font-size: 5vw;
     }
+
     .search-bar {
         width: 30vw;
         height: 5vw;
     }
+
+    h2 {
+        font-size: 2vw;
+    }
+
+    p {
+        font-size: 2vw;
+    }
+
+    .cta-buttons .a, .b{
+        font-size: 3vw;
+    }
+
 }
