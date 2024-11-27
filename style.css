@@ -12,35 +12,62 @@ body {
 header,
 h1 {
     background-color: #ffffff;
-    padding: 0px;
-    margin: 0.1vw 0 0.1vw 0;
-    text-align: center;
-    font-size: 3vw;
-    color: rgb(245, 148, 148);
+    font-size: 2.5vw;
+    color: #ff666b;
 }
 
 .flex-container {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.flex-container>div {
-    font-size: 30px;
-    margin: 0.1vw 0 0.1vw 0;
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #23d43b;
+    border-radius: 5px;
+    padding: 0.8vw;
+    background: #f0f1f1;
+    max-width: 30vw;
+    height: 4vw;
+    width: 100%;
 }
 
-input {
-    background-color: #777;
-    padding: 0;
-    margin: 1vw 0 1vw 40vw;
-    width: 20vw;
-    height: 2vw;
+.search-bar i {
+    color: #888;
+    font-weight:  Thin;
+    margin-right: 10px;
+    font-size: 1.6vw;
 }
 
+.search-bar input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 2vw;
+    text-align: justify;
+}
 
-/* Container for flexboxes */
+.search-bar:hover {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ------------ Nav -------------- */
+
 section {
     display: -webkit-flex;
     display: flex;
+}
+
+.container {
+    display: flex;
+    background: #ff666b;
+    padding: 20px;
+    width: 100%;
 }
 
 /* Style the navigation menu */
@@ -49,17 +76,17 @@ ul {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    list-style-type: none;
+    list-style: none;
+    margin: 0;
     padding: 0;
-    background: #ccc;
     display: flex;
-    font-size: 2vw;
-    justify-content: center;
+    justify-content: space-evenly;
+    font-size: 1.5vw;
 }
 
-/* Adds space between items */
-li {
-    margin: 0 3vw;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Style the content */
@@ -82,11 +109,10 @@ footer {
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
     h1 {
-        font-size: 7vw;
+        font-size: 5vw;
     }
-    input {
-        margin: 0 0 2vw 14vw;
+    .search-bar {
         width: 30vw;
-        height: 4vw;
+        height: 5vw;
     }
 }
