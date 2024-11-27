@@ -1,5 +1,92 @@
-h1 {
+* {
+    box-sizing: border-box;
+}
+
+/*font*/
+body {
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
-    color: blue;
+    margin: 0px;
+}
+
+/* Style the header */
+header,
+h1 {
+    background-color: #ffffff;
+    padding: 0px;
+    margin: 0.1vw 0 0.1vw 0;
+    text-align: center;
+    font-size: 3vw;
+    color: rgb(245, 148, 148);
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-container>div {
+    font-size: 30px;
+    margin: 0.1vw 0 0.1vw 0;
+}
+
+input {
+    background-color: #777;
+    padding: 0;
+    margin: 1vw 0 1vw 40vw;
+    width: 20vw;
+    height: 2vw;
+}
+
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Style the navigation menu */
+nav,
+ul {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+    background: #ccc;
+    display: flex;
+    font-size: 2vw;
+    justify-content: center;
+}
+
+/* Adds space between items */
+li {
+    margin: 0 3vw;
+}
+
+/* Style the content */
+article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 7vw;
+    }
+    input {
+        margin: 0 0 2vw 14vw;
+        width: 30vw;
+        height: 4vw;
+    }
 }
