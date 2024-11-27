@@ -9,8 +9,7 @@ body {
 }
 
 /* Style the header */
-header,
-h1 {
+.flex-container h1 {
     background-color: #ffffff;
     font-size: 2.5vw;
     color: #ff666b;
@@ -31,7 +30,7 @@ h1 {
     padding: 0.8vw;
     background: #f0f1f1;
     max-width: 30vw;
-    height: 4vw;
+    height: 3vw;
     width: 100%;
 }
 
@@ -39,7 +38,7 @@ h1 {
     color: #888;
     font-weight: Thin;
     margin-right: 10px;
-    font-size: 1.6vw;
+    font-size: 1.5vw;
 }
 
 .search-bar input {
@@ -47,7 +46,7 @@ h1 {
     outline: none;
     background-color: transparent;
     width: 100%;
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-align: justify;
 }
 
@@ -88,6 +87,11 @@ ul {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+}
+
+li a:hover {
+    color: #000000;
+    text-shadow: 0 0 10px rgb(37, 137, 243);
 }
 
 /* ------------------- Hero -------------------- */
@@ -137,6 +141,7 @@ nav ul li a {
     background: #ffffff;
     margin: 20px;
     width: 100%;
+    font-size: 1vw;
     text-align: center;
     font-weight: 100;
     justify-content: space-evenly;
@@ -148,6 +153,74 @@ nav ul li a {
     cursor: default;
     text-shadow: 0 0 10px rgba(9, 102, 202, 0.5);
 }
+
+/* ----------------- Categories ----------------- */
+.title {
+    display: block;
+    color: #000000;
+    text-align: center;
+}
+
+.categories {
+    display: flex;
+    margin: 20px 40px 20px 40px;
+    width: 100%;
+    font-size: 1vw;
+    font-weight: 100;
+    gap: 1vw;
+}
+
+.category-card {
+    flex: 1;
+    display: flex;
+    height: 20vw;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.category-card.green {
+    background-color: #5dbe88;
+}
+
+.category-card.orange {
+    background-color: #fec8a4;
+}
+
+.category-content-green h2 {
+    color: #ffffff;
+    font-size: 2vw;
+}
+
+.category-content-orange h2 {
+    color: #000000;
+    font-size: 2vw;
+}
+
+.category-content-green p {
+    color: #ffffff;
+}
+
+.explore-btn {
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding: 1vw;
+}
+
+.explore-btn:hover {
+    color: #ffffff;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.category-card:hover {
+    transform: scale(1.1);
+}
+
 
 /* Products */
 .products {
@@ -232,8 +305,34 @@ footer {
         font-size: 2vw;
     }
 
-    .cta-buttons .a, .b{
+    .cta-buttons .a,
+    .b {
         font-size: 3vw;
     }
+
+    .category-card {
+        height: 30vw;
+    }
+
+    .explore-btn {
+        font-size: 2vw;
+    }
+
+    .category-content-green h2 {
+        font-size: 2.5vw;
+    }
+
+    .category-content-green p {
+        font-size: 1.5vw;
+    }
+
+    .category-content-orange h2 {
+        font-size: 2.5vw;
+    }
+
+    .category-content-orange p {
+        font-size: 1.5vw;
+    }
+
 
 }
